@@ -1,0 +1,45 @@
+.form {
+    display: grid;
+    width: 300px;
+    margin: 10px 20px;
+    place-items: center;
+}
+
+.form input {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    transition: border-color 0.4s ease;
+    border: 1px solid transparent;
+    margin-bottom: 30px;
+    background-color: rgb(204, 159, 151);
+}
+
+.form input:focus {
+    border: 1px solid #f56d6d;
+}
+
+.form label {
+    display: inline-table;
+    margin: 10px;
+    width: 50px;
+}
+
+.form small {
+    position: relative;
+    font-size: 10px;
+    color: red;
+    margin-top: -40px;
+}
+
+.image {
+    width: 500px;
+    height: 500px;
+}
+
+.login {
+    text-align: -webkit-center;
+    position: relative;
+    top: 200px;
+}
+
