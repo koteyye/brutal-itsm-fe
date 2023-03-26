@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logobtn {
+    display: flex;
+    margin: auto 10px;
+    align-items: center;
+}
+
+.logobtn button {
+    margin-left: 20px;
+    height: 40px;
+}
+
+.profile {
+    display: grid;
+    justify-items: center;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 100%;
+    border: thick double #f56d6d;
+}

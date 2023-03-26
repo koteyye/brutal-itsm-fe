@@ -14,12 +14,11 @@ export const login = data => async dispatch => {
     try {
         dispatch(loginStart())
         const res = await Auth.signIn(data)
-        localStorage.setItem("token", res.data.accessToken)
+        localStorage.setItem("token", res.data.token)
         toast("Ты успешно вошел в меня")
 
         dispatch(loginSuccess(res.data.accessToken))
     } catch (e) {
-        toast("Неверный логин или пароль")
         dispatch(loginFailure(e.messages))
     }
 }

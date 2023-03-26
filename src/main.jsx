@@ -7,6 +7,7 @@ import './assets/styles/global.css'
 import AuthGuard from "./router/Auth-guard.jsx";
 import {Provider} from "react-redux";
 import {store} from "./store/index.js";
+import Header from "./components/UI/header/Header.jsx";
 
 const queryClient = new QueryClient()
 
@@ -18,6 +19,7 @@ root.render(
     <Provider store={store}>
         <QueryClientProvider client={queryClient}>
             <AuthGuard>
+                <Header />
                 <Router/>
             </AuthGuard>
         </QueryClientProvider>

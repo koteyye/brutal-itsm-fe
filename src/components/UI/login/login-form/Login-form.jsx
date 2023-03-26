@@ -2,19 +2,19 @@ import {useAppDispatch} from "../../../../store/index.js";
 import {useForm} from "react-hook-form";
 import styles from "../Login.module.css"
 import {login} from "../../../../store/actions/authActions.js";
+import {toast, ToastContainer} from "react-toastify";
 
 
 const LoginForm = () => {
     const dispatch = useAppDispatch()
 
-    const {register, reset, handleSubmit, formState: {errors}} = useForm({
+    const {register, reset, handleSubmit, setError, formState: {errors}} = useForm({
         mode: 'onBlur'
     })
 
-    console.log(errors.password)
-
     const signIn = (data) => {
         dispatch(login(data))
+
         reset()
     }
 

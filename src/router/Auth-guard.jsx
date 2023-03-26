@@ -4,7 +4,6 @@ import Login from "../components/UI/login/Login.jsx";
 
 const AuthGuard = ({children}) => {
     const token = useToken()
-    console.log(token)
     return (
         <div>
             {token ? children : <Login children={children}/>}
