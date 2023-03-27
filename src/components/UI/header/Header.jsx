@@ -5,15 +5,13 @@ import {useQuery} from "react-query";
 import Login from "../login/Login.jsx";
 import {Auth} from "../../../api/auth.js";
 import {useEffect} from "react";
+import Btn from "../btn/Btn.jsx";
+import {useProfile} from "../../../hooks/useProfile.js";
+import penis from "../../../assets/icons/penis-svgrepo-com.svg"
 
 const Header = () => {
-
-
-    const {isLoading, error, data} = useQuery('profile', Auth.me)
-    console.log(data)
+    const {isLoading, error, data} = useQuery('profile', useProfile)
     if (isLoading) return <p>Загрузка...</p>
-
-    if (error) return <Login/>
 
     const avatar = () => {
         if (!data.data.avatar.filename) {
@@ -23,7 +21,6 @@ const Header = () => {
     }
 
     const ava = avatar()
-    console.log(ava)
 
     return (
         <div className={styles.header}>
@@ -35,7 +32,10 @@ const Header = () => {
                 <img src={ava} className={styles.avatar}/>
                 <span>{`${data.data.lastname} ${data.data.firstname} ${data.data.middlename}`}</span>
             </div>
-
+            <Btn label="Нет члена" />
+            <Btn label="Есть член" color="green" icon={penis} disable={true}/>
+            <Btn color="aqua" icon={penis} />
+            <Btn color="aqua" icon={penis} disable={true} />
         </div>
     )
 }

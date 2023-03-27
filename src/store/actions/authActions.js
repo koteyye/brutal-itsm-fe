@@ -14,7 +14,7 @@ export const login = data => async dispatch => {
     try {
         dispatch(loginStart())
         const res = await Auth.signIn(data)
-        localStorage.setItem("token", res.data.token)
+        localStorage.setItem("token", res.data.accessToken)
         toast("Ты успешно вошел в меня")
 
         dispatch(loginSuccess(res.data.accessToken))
