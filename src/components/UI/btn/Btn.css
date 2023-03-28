@@ -1,26 +1,29 @@
 .red {
-    background-color: #f56d6d;
+    background: rgb(36,14,0);
+    background: linear-gradient(277deg, rgba(36,14,0,1) 0%, rgba(143,84,84,1) 23%, rgba(42,12,12,1) 100%);
 }
 
 .green {
-    background-color: greenyellow;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(70,124,36,1) 100%);
 }
 
 .aqua {
-    background-color: #81e1e1;
+    background: rgb(28,86,87);
+    background: linear-gradient(0deg, rgba(28,86,87,1) 0%, rgba(105,209,197,1) 100%);
 }
 
 .btn {
     display: flex;
     margin: auto 10px;
     padding: 8px 30px;
-    border: none;
+    border: solid 1px #72767d;
     outline: none;
     border-radius: 5px;
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
-    color:rgb(31, 30, 30);
+    color: rgb(155, 146, 146);
     max-width: 200px;
     max-height: 50px;
     justify-content: center;
@@ -28,13 +31,15 @@
     justify-content: space-evenly;
 }
 .btn:hover{
-    background-color: antiquewhite;
+    color: black;
+    box-shadow: 0px 9px 13px -4px rgba(34, 60, 80, 0.4);
 }
 
 .btn:disabled{
     cursor: auto;
-    background-color: aliceblue;
-    color: dimgray;
+    background: rgb(19,17,18);
+    background: linear-gradient(99deg, rgba(19,17,18,1) 0%, rgba(180,186,190,1) 76%, rgba(103,109,113,1) 100%);
+    color: azure;
 }
 
 .btn-circle {
@@ -46,6 +51,7 @@
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
+    border: solid 1px #72767d;
     color:rgb(31, 30, 30);
     max-width: 40px;
     max-height: 40px;
@@ -54,7 +60,8 @@
     justify-content: space-evenly;
 }
 .btn-circle:hover {
-    background-color: antiquewhite;
+    background: rgb(36,14,0);
+    background: linear-gradient(202deg, rgba(36,14,0,1) 0%, rgba(200,172,172,1) 23%, rgba(42,12,12,1) 100%);
 }
 .btn-circle:disabled{
     cursor: auto;

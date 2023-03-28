@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form";
 import styles from "../Login.module.css"
 import {login} from "../../../../store/actions/authActions.js";
 import {toast, ToastContainer} from "react-toastify";
+import Btn from "../../btn/Btn.jsx";
 
 
 const LoginForm = () => {
@@ -24,10 +25,11 @@ const LoginForm = () => {
                 placeholder='Логин'/>
             {errors.login ? <small>{errors.login.message}</small> : <div/>}
             <input {...register('password', {required: "Пароль обязательный для заполнения", minLength: 8})}
-                placeholder='Пароль'/>
+                placeholder='Пароль'
+            type='password'/>
             {errors.password?.type === "required" && <small>{errors.password.message}</small>}
             {errors.password?.type === "minLength" && <small>Минимальная длинна пароля 8 символов</small>}
-            <button className='btn'>Войти</button>
+            <Btn label='Войти' click={handleSubmit(signIn)} />
         </form>
     )
 }

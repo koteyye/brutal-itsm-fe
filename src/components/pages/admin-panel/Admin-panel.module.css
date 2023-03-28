@@ -1,3 +1,82 @@
-.userlist {
+.adminpanel {
+    display: flex;
     margin: auto 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+
+.userListTable {
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    border-collapse: separate;
+    min-width: 800px;
+}
+.userListTable thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+.userListTable tr th:first-child, .userListTable tr td:first-child {
+    border-left: 1px solid #ddd;
+}
+.userListTable tr th:last-child, .userListTable tr td:last-child {
+    border-right: 1px solid #ddd;
+}
+.userListTable thead tr th:first-child {
+    border-radius: 20px 0 0 0;
+}
+.userListTable thead tr th:last-child {
+    border-radius: 0 20px 0 0;
+}
+.userListTable tbody td {
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: center;
+}
+.userListTable tbody tr:nth-child(even) {
+    background: #efd5d5;
+}
+.userListTable tbody tr:last-child td{
+    border-bottom: 1px solid #ddd;
+}
+.userListTable tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 20px;
+}
+.userListTable tbody tr:last-child td:last-child {
+    border-radius: 0 0 20px 0;
+}
+
+.tdava {
+    text-align-last: center;
+    width: 40px;
+}
+.tdava img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: thick double rgba(143,84,84,1);
+}
+
+.tdbtn {
+    width: 40px;
+}
+
+.trhead {
+    background: rgb(145,87,83);
+    background: linear-gradient(202deg, rgba(145,87,83,1) 0%, rgba(185,205,203,0.35898109243697474) 23%, rgba(79,17,17,1) 100%);
+}
+
+.userListBlockTable {
+    width: 99%;
 }

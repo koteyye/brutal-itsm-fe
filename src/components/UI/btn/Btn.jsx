@@ -18,7 +18,7 @@ const Btn = (props) => {
         <button type='button'
                 className={`${props.color} ${btnFormClass()}`}
                 disabled={props.disable}
-            onClick={() => setChlen(chlen + 1)}>
+            onClick={props.click}>
             {props.icon !== "" && <img style={{margin: '10px'}} src={props.icon} width="30px" height="30px" alt="icon"/>}
             {props.label !== "" && props.label}
         </button>
@@ -29,7 +29,9 @@ Btn.defaultProps = {
     label: "",
     color: "red",
     icon: "",
-    disable: false
+    disable: false,
+    width: "30px",
+    height: "30px"
 }
 
 export default Btn
