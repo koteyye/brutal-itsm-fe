@@ -1,0 +1,47 @@
+.searchAutocomplite {
+    position: relative;
+    margin-bottom: 5px;
+    width: 350px;
+    height: 40px;
+}
+
+.searchAutocomplite input {
+    width: 98%;
+    position: relative;
+    padding: 10px;
+}
+
+.searchAutocomplite ul {
+    position: absolute;
+    left: 0;
+    top: 37px;
+    width: 100%;
+    background: rgba(246, 238, 238, 0.92);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 10px 36px -3px rgba(0,0,0,0.1);
+    z-index: 111;
+    max-height: 240px;
+    height: auto;
+    overflow: auto;
+}
+
+.searchAutocomplite li {
+    padding: 10px;
+    cursor: pointer;
+    transition: cubic-bezier(1, 0, 0, 1) .3s all;
+}
+.searchAutocomplite li:hover {
+    background: rgb(145,87,83);
+    background: linear-gradient(202deg, rgba(145,87,83,0.4234068627450981) 0%, rgba(193,186,163,0.2665441176470589) 23%, rgba(79,17,17,0.2721463585434174) 100%);
+}
+
+.closebtn {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 95%;
+    height: 100%;
+    align-items: center;
+}

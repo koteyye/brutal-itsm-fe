@@ -5,6 +5,7 @@ import Menu from "../../UI/menu/Menu.jsx";
 import style from "./Admin-panel.module.css"
 import {useEffect, useState} from "react";
 import {items} from "./menu-items.js";
+import CreateUserForm from "./create-user-form/Create-user-form.jsx";
 
 
 export const adminPanel = () => {
@@ -30,19 +31,23 @@ export const adminPanel = () => {
 
     const createForm = () => {
         return (
-            <div>Ну а тут будет форма создания пользака, до которой пока не дошел</div>
+            <div className={style.createUser}>
+                <CreateUserForm />
+            </div>
         )
     }
 
     const menuItems = items
 
 
+
+
     return (
         <div>
-        <h1 className={style.title}>Меню администратора</h1>
+        <h1 className={style.title}>Панель администратора</h1>
         <div className={style.adminpanel}>
             <aside>
-                {menuItems.map(mi => <Menu key={mi.id} menuItems={mi} click={(e) => setClick(e)}/>)}
+               <Menu title="Меню администратора" menuItems={menuItems} click={(e) => setClick(e)}/>
             </aside>
             {showForm()}
         </div>

@@ -8,8 +8,22 @@
     border: solid 1px rgba(186, 101, 116, 0.18);
     border-radius: 10px;
     cursor: pointer;
+    margin: auto 5px 15px;
 }
 
 .menu label:hover {
     box-shadow: 0px 9px 13px -4px rgba(34, 60, 80, 0.4);
+}
+
+.menuBody {
+    text-align: center;
+    margin: auto 10px;
+    box-shadow: 19px 14px 31px 7px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    max-width: 198px;
+}
+
+.menuBody h2 {
+    text-shadow: 1px 1px 2px #be9fa5;
+    padding: 10px;
 }
