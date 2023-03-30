@@ -34,7 +34,7 @@ const SearchInput = (props) => {
 
 
     return (
-        <div style={{display: "flex"}}>
+        <div style={{marginBottom: "35px"}}>
             <div className={style.searchAutocomplite}>
                 <input
                     type='text'

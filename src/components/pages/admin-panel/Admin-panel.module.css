@@ -1,6 +1,11 @@
 .adminpanel {
     display: flex;
-    margin: auto 10px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.adminpanelSide {
+    position: absolute;
 }
 
 .title {
@@ -79,4 +84,39 @@
 
 .userListBlockTable {
     width: 99%;
+    margin-left: 220px;
+}
+.createUserForm div {
+
+}
+
+.createUserForm h2 {
+    text-align: center;
+}
+
+.createUserForm input {
+    padding: 10px;
+    border: solid 1px hsl(0, 0%, 80%);
+    border-radius: 4px;
+}
+
+.createUserFormField {
+    display: grid;
+    grid-template-columns: 100px 450px;
+    margin-bottom: 20px;
+}
+
+.createUserFormSearch {
+    display: grid;
+    grid-template-columns: 100px 450px;
+    margin-bottom: 20px;
+}
+
+.createUserForm label {
+    align-self: center;
+}
+
+.createUserFormSelect {
+    display: flex;
+    justify-content: space-between;
 }

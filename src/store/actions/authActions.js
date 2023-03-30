@@ -35,6 +35,6 @@ export const me = () => async dispatch => {
 
 export const logout = () => async dispatch => {
     dispatch(logoutSuccess())
-    localStorage.removeItem("token")
+    localStorage.clear()
     location.assign("/")
 }

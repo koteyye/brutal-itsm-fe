@@ -1,5 +1,5 @@
 import axios from "axios"
-import {useToken} from "../../hooks/useLocalStorage.js";
+import {useToken} from "../../hooks/useCheckAuth.js";
 
 
 

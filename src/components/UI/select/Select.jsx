@@ -7,12 +7,12 @@ const SelectField = (props) => {
 
     const [selectedValue, setSeletedValue] = useState(1)
 
-    // const {data, isLoading, error} =useQuery('roleList', props.values)
-    // if (isLoading) return <p>Загрузка...</p>
+    const {data, isLoading, error} =useQuery('roleList', props.values)
+    if (isLoading) return <p>Загрузка...</p>
 
 
     const getValue = () => {
-        return selectedValue ? props.values.find(c => c.value === selectedValue) : 1
+        return selectedValue ? data.data.find(c => c.value === selectedValue) : 1
     }
 
     
@@ -31,8 +31,8 @@ const SelectField = (props) => {
         //     <small>{`Выбрано ${selectedValue}`}</small>
         // </div>
 
-        <div className={style.selectField}>
-            <Select onChange={onChange} value={getValue()} options={props.values} />
+        <div style={{width: "450px"}}>
+            <Select onChange={onChange} value={getValue()} options={data.data} />
         </div>
     )
 }

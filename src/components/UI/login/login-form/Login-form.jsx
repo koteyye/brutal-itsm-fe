@@ -15,7 +15,6 @@ const LoginForm = () => {
 
     const signIn = (data) => {
         dispatch(login(data))
-
         reset()
     }
 

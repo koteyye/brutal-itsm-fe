@@ -8,12 +8,6 @@ const Btn = (props) => {
         } return "btn"
     }
 
-    const [chlen, setChlen] = useState(1)
-
-    useEffect(() => {
-        document.title = `Вы нажали ${chlen}`
-    })
-
     return (
         <button type='button'
                 className={`${props.color} ${btnFormClass()}`}

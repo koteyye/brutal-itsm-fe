@@ -1,11 +1,11 @@
 .red {
     background: rgb(36,14,0);
-    background: linear-gradient(277deg, rgba(36,14,0,1) 0%, rgba(143,84,84,1) 23%, rgba(42,12,12,1) 100%);
+    background: linear-gradient(277deg, rgb(146, 60, 67) 0%, rgba(143,84,84,1) 23%, rgb(130, 47, 47) 100%);
 }
 
 .green {
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(70,124,36,1) 100%);
+    background: rgb(172, 236, 196);
+    background: linear-gradient(0deg, rgb(116, 169, 100) 0%, rgb(47, 234, 45) 100%);
 }
 
 .aqua {
@@ -23,7 +23,7 @@
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
-    color: rgb(155, 146, 146);
+    color: rgb(35, 23, 23);
     max-width: 200px;
     max-height: 50px;
     justify-content: center;

@@ -1,13 +1,23 @@
-import {useToken} from "../hooks/useLocalStorage.js";
+import {useCheckLogin, useToken} from "../hooks/useCheckAuth.js";
 import Login from "../components/UI/login/Login.jsx";
+import {useEffect, useState} from "react";
 
 
 const AuthGuard = ({children}) => {
-    // const token = useToken()
-    const token = 1
+
+    const [authorized, setAuthorized] = useState(false)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await useCheckLogin()
+            setAuthorized(data)
+        }
+        fetchData()
+    })
+
     return (
         <div>
-            {token ? children : <Login children={children}/>}
+            {authorized ? children : <Login children={children}/>}
         </div>
     )
 }
