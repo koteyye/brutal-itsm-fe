@@ -19,7 +19,7 @@ root.render(
     <Provider store={store}>
         <QueryClientProvider client={queryClient}>
             <AuthGuard>
-                <Header />
+                {/* <Header /> */}
                 <Router/>
             </AuthGuard>
         </QueryClientProvider>

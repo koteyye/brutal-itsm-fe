@@ -7,5 +7,8 @@ export const RoutesNames = {
         Path: '/admin-panel',
         RequiredRole: true,
         Roles: ['admin']
+    },
+    TestPage: {
+        Path: '/test-page'
     }
 }

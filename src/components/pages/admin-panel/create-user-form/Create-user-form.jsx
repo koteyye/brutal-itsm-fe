@@ -26,65 +26,80 @@ const CreateUserForm = () => {
     }
 
     return (
-        <form className={style.createUserForm} onSubmit={handleSubmit(createUser)}>
-            <div>
-                <label>Логин</label>
-                <input
-                    {...register('login', {required: true})}
-                    placeholder='Введи логин'/>
-            </div>
+      <form
+        className={style.createUserForm}
+        onSubmit={handleSubmit(createUser)}
+      >
+        <div>
+          <label>Логин</label>
+          <input
+            {...register("login", { required: true })}
+            placeholder="Введи логин"
+          />
+        </div>
 
-            <div>
-                <label>Email</label>
-                <input
-                    {...register('email')}
-                    placeholder='Введи почту (при наличии)'/>
-            </div>
+        <div>
+          <label>Email</label>
+          <input
+            {...register("email")}
+            placeholder="Введи почту (при наличии)"
+          />
+        </div>
 
-            <div>
-                <label>Фамилия</label>
-                <input
-                    {...register('lastname', {required: true})}
-                    placeholder='Введи почту (при наличии)'/>
-            </div>
+        <div>
+          <label>Фамилия</label>
+          <input
+            {...register("lastname", { required: true })}
+            placeholder="Введи почту (при наличии)"
+          />
+        </div>
 
-            <div>
-                <label>Имя</label>
-                <input
-                    {...register('firstname', {required: true})}
-                    placeholder='Введи почту (при наличии)'/>
-            </div>
+        <div>
+          <label>Имя</label>
+          <input
+            {...register("firstname", { required: true })}
+            placeholder="Введи почту (при наличии)"
+          />
+        </div>
 
-            <div>
-                <label>Отчество</label>
-                <input
-                    {...register('middlename', {required: true})}
-                    placeholder='Введи почту (при наличии)'/>
-            </div>
+        <div>
+          <label>Отчество</label>
+          <input
+            {...register("middlename", { required: true })}
+            placeholder="Введи почту (при наличии)"
+          />
+        </div>
 
-            <div style={{display: "flex"}}>
-                <label>Должность</label>
-                <SearchInput searchObject={searchObject.job} clickResult={(e) => setValue('job', e, {})
-                }/>
-            </div>
+        <div style={{ display: "flex" }}>
+          <label>Должность</label>
+          <SearchInput
+            placeholderText="Начни вводить должность для поиска"
+            searchObject={searchObject.job}
+            clickResult={(e) => setValue("job", e, {})}
+          />
+        </div>
 
-            <div style={{display: "flex"}}>
-                <label>Организация</label>
-                <SearchInput searchObject={searchObject.org} clickResult={(e) => setValue('org', e, {})
-                }/>
-            </div>
+        <div style={{ display: "flex" }}>
+          <label>Организация</label>
+          <SearchInput
+            placeholderText="Начни вводить организацию для поиска"
+            searchObject={searchObject.org}
+            clickResult={(e) => setValue("org", e, {})}
+          />
+        </div>
 
-            <div style={{display: "flex"}}>
-                <label>Роли</label>
-                <SelectField values={useRoleList} handleChange={(e) => {
-                    setValue('role', e)
-                    console.log(getValues('role'))
-                }} />
-            </div>
-
-
-        </form>
-    )
+        <div style={{ display: "flex" }}>
+          <label>Роли</label>
+          <SelectField
+            values={useRoleList}
+            handleChange={(e) => {
+              setValue("role", e);
+              console.log(getValues("role"));
+            }}
+          />
+        </div>
+      </form>
+    );
 }
 
 export default CreateUserForm
