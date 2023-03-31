@@ -12,14 +12,14 @@ const SelectField = (props) => {
 
 
     const getValue = () => {
-        return selectedValue ? data.data.find(c => c.value === selectedValue) : 1
+        return selectedValue ? data.data.find(c => c.value === selectedValue) : data.data.value[0]
     }
 
     
 
     const onChange = (newValue) => {
         setSeletedValue(newValue)
-        props.setValue(newValue)
+        props.handleChange(newValue.value)
     }
 
     return (
