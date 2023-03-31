@@ -1,13 +1,13 @@
 import style from "./Select.module.css"
 import {useQuery} from "react-query";
-import { useState } from "react";
+import {useState} from "react";
 import Select from 'react-select'
 
 const SelectField = (props) => {
 
     const [selectedValue, setSeletedValue] = useState(1)
 
-    const {data, isLoading, error} =useQuery('roleList', props.values)
+    const {data, isLoading, error} = useQuery('roleList', props.values)
     if (isLoading) return <p>Загрузка...</p>
 
 
@@ -15,7 +15,6 @@ const SelectField = (props) => {
         return selectedValue ? data.data.find(c => c.value === selectedValue) : data.data.value[0]
     }
 
-    
 
     const onChange = (newValue) => {
         setSeletedValue(newValue)
@@ -23,16 +22,10 @@ const SelectField = (props) => {
     }
 
     return (
-        // <div className={style.select}>
-        //     <select value={getValue()} onChange={e => onChange(e.target.value)}>
-        //         {props.values ? props.values.map(v => <option key={v.id} value={v.id}>{v.name}</option>): null}
-        //         {/* {data.data ? data.data.map(v => <option key={v.id} value={v.id}>{v.name}</option>) : null} */}
-        //     </select>
-        //     <small>{`Выбрано ${selectedValue}`}</small>
-        // </div>
+
 
         <div style={{width: "450px"}}>
-            <Select onChange={onChange} value={getValue()} options={data.data} />
+            <Select onChange={onChange} value={getValue()} options={data.data} placeholder="Выбери роль этого чувака"/>
         </div>
     )
 }

@@ -47,6 +47,7 @@ const CreateUserForm = (props) => {
                 <label>Логин</label>
                 <input
                     {...register("login", {required: true})}
+                    type="text"
                     placeholder="Введи логин"
                 />
             </div>
@@ -55,6 +56,7 @@ const CreateUserForm = (props) => {
                 <label>Email</label>
                 <input
                     {...register("email")}
+                    type="email"
                     placeholder="Введи почту (при наличии)"
                 />
             </div>
@@ -63,6 +65,7 @@ const CreateUserForm = (props) => {
                 <label>Фамилия</label>
                 <input
                     {...register("lastname", {required: true})}
+                    type="text"
                     placeholder="Введи почту (при наличии)"
                 />
             </div>
@@ -71,6 +74,7 @@ const CreateUserForm = (props) => {
                 <label>Имя</label>
                 <input
                     {...register("firstname", {required: true})}
+                    type="text"
                     placeholder="Введи почту (при наличии)"
                 />
             </div>
@@ -79,6 +83,7 @@ const CreateUserForm = (props) => {
                 <label>Отчество</label>
                 <input
                     {...register("middlename", {required: true})}
+                    type="text"
                     placeholder="Введи почту (при наличии)"
                 />
             </div>
@@ -88,7 +93,7 @@ const CreateUserForm = (props) => {
                 <SearchInput
                     placeholderText="Начни вводить должность для поиска"
                     searchObject={searchObject.job}
-                    clickResult={(e) => setValue("job", e, {required: true})}
+                    clickResult={(e) => setValue("job", e, {shouldValidate: true})}
                 />
             </div>
 
@@ -97,7 +102,7 @@ const CreateUserForm = (props) => {
                 <SearchInput
                     placeholderText="Начни вводить организацию для поиска"
                     searchObject={searchObject.org}
-                    clickResult={(e) => setValue("org", e, {required: true})}
+                    clickResult={(e) => setValue("org", e, {shouldValidate: true})}
                 />
             </div>
 
@@ -110,7 +115,8 @@ const CreateUserForm = (props) => {
                     }}
                 />
             </div>
-            <div>
+            <div className={style.createUserFormSearch}>
+                <label>Аватар</label>
                 <Uploader fileSelected={(e) => loadFd(e)} />
             </div>
             <div style={{display: "flex", placeContent: "center", marginTop: "20px"}}>
