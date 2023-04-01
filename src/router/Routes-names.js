@@ -8,6 +8,11 @@ export const RoutesNames = {
         RequiredRole: true,
         Roles: ['admin']
     },
+    UserItemView: {
+        Path: '/admin-panel/:id',
+        RequiredRole: true,
+        Roles: ['admin']
+    },
     TestPage: {
         Path: '/test-page'
     }

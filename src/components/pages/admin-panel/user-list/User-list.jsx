@@ -20,7 +20,7 @@ const UserList = (data) => {
         <tbody>
           {data.userList.length ? (
             data.userList.map((users) => (
-              <UserItem key={users.id} users={users} />
+              <UserItem key={users.id} users={users} remove={() => data.remove()} />
             ))
           ) : (
             <p>Нихуа нет</p>

@@ -29,7 +29,7 @@ export const adminPanel = () => {
 
   const userList = () => {
     return <div className={style.userListBlockTable}>
-        {isLoading ? <p>Загрузочка</p> : <UserList userList={data} />}
+        {isLoading ? <p>Загрузочка</p> : <UserList userList={data} remove={() => refetch()}/>}
         
     </div>;
   };

@@ -6,7 +6,8 @@ export const getUser = {
     userById: (id) => axiosInstance.get(`${Endpoints.USER.User}${id}`),
     roleList: () => axiosInstance.get(Endpoints.USER.RolesList),
     uploadAvatar: (id, file) => axiosInstance.post(`${Endpoints.USER.UploadAvatar}${id}`, file),
-    createUser: (data) => axiosInstance.post(`${Endpoints.USER.CreateUser}`, data)
+    createUser: (data) => axiosInstance.post(`${Endpoints.USER.CreateUser}`, data),
+    deleteUser: (id) => axiosInstance.delete(`${Endpoints.USER.DeleteUser}${id}`)
 }
 
 export const search = {

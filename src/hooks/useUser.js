@@ -10,6 +10,11 @@ export const useRoleList = async() => {
     return await getUser.roleList()
 }
 
+export const useUser = async(id) => {
+    const res = await getUser.userById(id)
+    return res.data
+}
+
 
 
 export const useCreateUser = async(data, avatar) => {
@@ -22,10 +27,19 @@ export const useCreateUser = async(data, avatar) => {
         }
         return userId
     } catch (e) {
-        return null
+        return e
     }
 }
 
 const useUploadAvatar = async(id, file) => {
     return await getUser.uploadAvatar(id, file)
+}
+
+
+export const useDeleteUser = async(data) => {
+    try {
+        return await getUser.deleteUser(data)
+    } catch (e) {
+        return e
+    }
 }
