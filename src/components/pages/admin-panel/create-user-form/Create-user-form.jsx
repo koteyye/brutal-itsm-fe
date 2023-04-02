@@ -82,7 +82,7 @@ const CreateUserForm = (props) => {
             <div className={style.createUserFormField}>
                 <label>Отчество</label>
                 <input
-                    {...register("middlename", {required: true})}
+                    {...register("middlename", )}
                     type="text"
                     placeholder="Введи почту (при наличии)"
                 />

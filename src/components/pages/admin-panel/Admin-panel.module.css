@@ -135,12 +135,13 @@
 /*_________________________________*/
 .userItemView {
     display: flex;
+    place-content: center;
 }
 
 .avatar {
     display: grid;
-    margin: 20px 30px;
     width: 320px;
+    margin-left: 20px;
 }
 
 .avatar img {
@@ -156,6 +157,43 @@
 
 .avatarBtn {
     place-self: center;
+}
+
+.userInfo {
+    width: 600px;
+    margin-left: 30px;
+}
+
+.infoItem {
+    display: grid;
+    grid-template-columns: 150px 200px;
+    margin-bottom: 20px;
+}
+
+.infoItem input {
+    padding: 10px;
+    border: solid 1px hsl(0, 0%, 80%);
+    border-radius: 4px;
+}
+
+.infoItem label {
+    align-self: center;
+}
+
+.infoItemArray {
+    display: grid;
+    grid-template-columns: 150px 200px;
+    margin-bottom: 20px;
+}
+
+.infoItemArray input {
+    padding: 10px;
+    border: solid 1px hsl(0, 0%, 80%);
+    border-radius: 4px;
+}
+
+.infoItemArray label {
+    align-self: center;
 }
 
 /*_________________________________*/

@@ -17,7 +17,7 @@ const UserItemView = () => {
     const ava = useAvatar(data)
 
     return <div>
-        <Link className='btn-back' to={'/admin-panel'}>Назад</Link>
+        <Link style={{color: "gray", marginLeft: "20px"}} to={'/admin-panel'}>Назад</Link>
         <h1 style={{textAlign: "center"}}>Профиль чувака: {data.login}</h1>
         <div className={style.userItemView}>
             <div className={style.avatar}>
@@ -31,34 +31,32 @@ const UserItemView = () => {
                 <h3>Информация о чуваке</h3>
                 <div className={style.infoItem}>
                     <label>Фамилия:</label>
-                    <span>{data.lastname}</span>
+                    <input disabled={true} value={data.lastname}/>
                 </div>
                 <div className={style.infoItem}>
                     <label>Имя:</label>
-                    <span>{data.firstname}</span>
+                    <input disabled={true} value={data.firstname}/>
                 </div>
                 {data.middlename &&
                 <div className={style.infoItem}>
                     <label>Отчетство:</label>
-                    <span>{data.lastname}</span>
+                    <input disabled={true} value={data.middlename}/>
                 </div>}
                 <div className={style.infoItem}>
                     <label>Login:</label>
-                    <span>{data.login}</span>
+                    <input disabled={true} value={data.login}/>
                 </div>
                 <div className={style.infoItem}>
                     <label>Должность:</label>
-                    <span>{data.job}</span>
+                    <input disabled={true} value={data.job}/>
                 </div>
                 <div className={style.infoItem}>
                     <label>Организация:</label>
-                    <span>{data.org}</span>
+                    <input disabled={true} value={data.org}/>
                 </div>
                 <div className={style.infoItemArray}>
-                    <label>Роли</label>
-                    <div>
-                        <span></span>
-                    </div>
+                    <label>Роли:</label>
+                    {data.roleList.map(roles => <input disabled={true} value={roles}/>)}
                 </div>
             </div>
         </div>
