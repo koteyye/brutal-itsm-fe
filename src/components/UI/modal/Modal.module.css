@@ -1,0 +1,24 @@
+.modal {
+    position: absolute;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 400px;
+    text-align: center;
+    opacity: 0;
+    animation: showModal 1.5s forwards;
+}
+
+@keyframes showModal {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes closeModal {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}

@@ -18,10 +18,10 @@ const root = ReactDOM.createRoot(
 root.render(
     <Provider store={store}>
         <QueryClientProvider client={queryClient}>
-            <AuthGuard>
-                 <Header />
+            {/* <AuthGuard> */}
+                 {/* <Header /> */}
                 <Router/>
-            </AuthGuard>
+            {/* </AuthGuard> */}
         </QueryClientProvider>
     </Provider>
 )

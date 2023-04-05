@@ -1,32 +1,17 @@
-import SearchInput from "../../UI/search-input/Search-input";
-import SelectField from "../../UI/select/Select"
-
+import { useState } from "react";
+import ContentModal from "./Content-Modal";
 
 const Testpage = () => {
 
+  const [showModal, setShowModal] = useState(false)
+  
+
     return (
-        <div style={{margin: "20px"}}>
         <div style={{ display: "flex" }}>
-          <label style={{marginRight: "10px", placeSelf: "center"}}>Тестовое поле</label>
-                <SelectField values={RoleList} setValue={ (e) => console.log(e) } />
+        {showModal && <ContentModal click1={(e) => console.log(e)} click2={() => setShowModal(false) } />}
+          <button onClick={() => setShowModal(true)}>Открыть жуйню</button>
         </div>
-      </div>
     );
 }
 
 export default Testpage
-
-const RoleList = [
-    {
-        value: 1,
-        label: "test1",
-    },
-    {
-        value: 2,
-        label: "test2",
-    },
-    {
-        value: 3,
-    label: "test3",
-  },
-];
