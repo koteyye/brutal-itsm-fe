@@ -31,10 +31,9 @@ export const useCreateUser = async(data, avatar) => {
     }
 }
 
-const useUploadAvatar = async(id, file) => {
+export const useUploadAvatar = async(id, file) => {
     return await getUser.uploadAvatar(id, file)
 }
-
 
 export const useDeleteUser = async(data) => {
     try {

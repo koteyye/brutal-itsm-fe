@@ -1,7 +1,7 @@
 .modal {
     position: absolute;
-    border: solid 1px gray;
-    border-radius: 5px;
+    border: solid 2px gray;
+    border-radius: 10px;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -11,6 +11,7 @@
     text-align: center;
     opacity: 0;
     animation: showModal 1.5s forwards;
+    background-color: rgba(232, 146, 146, 0.84);
 }
 
 @keyframes showModal {
